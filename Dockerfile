@@ -7,8 +7,11 @@ RUN apt-get -y install npm
 RUN sudo ln -s /usr/bin/nodejs /usr/bin/node
 #curl
 RUN apt-get -y install curl
-# Hapi
-RUN npm install hapi
+
+# Bundle app source
+COPY . /src
+# Install app dependencies
+RUN cd /src; npm install
 
 # Expose ports.
 # - 80: HTTP
