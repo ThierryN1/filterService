@@ -14,4 +14,4 @@ RUN npm install hapi
 # - 80: HTTP
 EXPOSE 80
 # Start
-CMD ["node", "startServer.js"]
+CMD ["node", "/src/startServer.js"]
